@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        hack-digit-2020
+        Скоро будет
       </h1>
       <div class="links">
         <a
