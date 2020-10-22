@@ -1,6 +1,6 @@
 <template>
   <div>
-    main
+    Мероприятия (47)
   </div>
 </template>
 
