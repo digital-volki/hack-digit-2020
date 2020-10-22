@@ -10,14 +10,16 @@
     <section>
       <div class="registr">
         <div class="registr-text">
-          <h3 class="registr-text-main">Личный кабинет</h3>
+          <h3 class="registr-text-main">
+            Личный кабинет
+          </h3>
         </div>
         <nav>
           <div class="social-network">
-              <img src="~/static/img/Group41.svg" alt="vk" class="registr-img">
-              <img src="~/static/img/Group39.svg" alt="facebook" class="registr-img">
-              <img src="~/static/img/Group38.svg" alt="google" class="registr-img">
-              <img src="~/static/img/Group42.svg" alt="odnoclassniki" class="registr-img">
+            <img src="~/static/img/Group41.svg" alt="vk" class="registr-img">
+            <img src="~/static/img/Group39.svg" alt="facebook" class="registr-img">
+            <img src="~/static/img/Group38.svg" alt="google" class="registr-img">
+            <img src="~/static/img/Group42.svg" alt="odnoclassniki" class="registr-img">
           </div>
         </nav>
       </div>
