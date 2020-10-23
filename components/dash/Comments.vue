@@ -1,6 +1,6 @@
 <template>
   <div>
-    <iframe class="w-100 mt-3 border-0 h-100" src="/AC.html" />
+    <iframe class="w-100 mt-3 border-0" src="/AC.html" />
   </div>
 </template>
 
@@ -12,4 +12,7 @@ export default {
 
 <style scoped>
 
+iframe{
+  height: 1000px;
+}
 </style>
