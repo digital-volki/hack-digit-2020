@@ -1,8 +1,9 @@
 <template>
-  <div class="container">
-    <h1>
-      Hello Worl
-    </h1>
+  <div>
+    main page
+    <nuxt-link to="/dash">
+      К дешборду
+    </nuxt-link>
   </div>
 </template>
 

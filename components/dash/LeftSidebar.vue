@@ -1,0 +1,94 @@
+<template>
+  <div class="pt-5 pl-5 container-top sticky-top text-white pr-5">
+    <nuxt-link class="text-white d-flex align-items-center" to="/dash">
+      <Back />
+      <div class="ml-2">
+        На главную
+      </div>
+    </nuxt-link>
+    <nuxt-link to="/dash/profile" class="text-white d-flex mt-3 justify-content-between align-items-center">
+      <img src="/ex/avatar.png" class="" alt="avatar">
+      <div class="flex-column flex-fill">
+        <div class="ml-2">
+          Даниил Морозов
+        </div>
+        <div class="ml-2 link">
+          Перейти в профиль
+        </div>
+      </div>
+    </nuxt-link>
+    <div class="mt-5">
+      <b-list-group flush>
+        <b-list-group-item class="bg-inv m-0 p-0 ">
+          <nuxt-link v-for="(item, index) in links" :key="index" :to="item.to" class="mt-3 text-white d-flex justify-content-around align-items-center">
+            <component :is="item.icon" />
+            <div class="ml-1">
+              {{ item.name }}
+            </div>
+            <b-badge pill class="bg-white green-link mt-1 ml-auto">
+              {{ item.countNotification }}
+            </b-badge>
+          </nuxt-link>
+        </b-list-group-item>
+      </b-list-group>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.green-link{
+  color: #84CD8B;
+}
+.bg-inv {
+  background-color: #00000000;
+}
+
+*:hover {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: underline white;
+}
+
+.container-top {
+  background-color: #84CD8B;
+  height: 100vh;
+}
+
+</style>
+<script>
+
+import Back from '@/components/icons/Back'
+import Calendar from '@/components/icons/Calendar'
+import Cup from '@/components/icons/Cup'
+import Bookmark from '@/components/icons/Bookmark'
+
+export default {
+  components: {
+    Calendar,
+    Back
+  },
+  data () {
+    return {
+      links: [{
+        to: '/dash',
+        icon: Calendar,
+        name: 'Мероприятия',
+        countNotification: 2
+      }, {
+        name: 'Достижения',
+        to: '/dash/awards',
+        icon: Cup,
+        countNotification: 1
+      }, {
+        name: 'Мои заявки',
+        to: '/dash/requests',
+        icon: Bookmark,
+        countNotification: 29
+      }],
+      color: 'white'
+    }
+  }
+}
+</script>
