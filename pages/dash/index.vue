@@ -1,18 +1,28 @@
 <template>
   <div>
-    Мероприятия (47)
+    <div>
+      Мероприятия (47)
+    </div>
+    <div>
+      <Card />
+    </div>
   </div>
 </template>
 
 <script>
+import Card from '~/components/dash/Card'
+
 export default {
-  layout: 'dash',
-  name: 'Dash'
+  name: 'Dash',
+  components: {
+    Card
+  },
+  layout: 'dash'
 }
 </script>
 
 <style scoped>
-div{
+div {
   font-size: 35px;
 }
 </style>
