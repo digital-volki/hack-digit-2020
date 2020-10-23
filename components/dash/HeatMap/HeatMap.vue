@@ -16,11 +16,23 @@ export default {
       entries: [
         {
           counting: 2070,
-          created_at: '2020-06-24'
+          created_at: '2020-09-24'
+        },
+        {
+          counting: 1070,
+          created_at: '2020-09-25'
         },
         {
           counting: 3493,
-          created_at: '2018-06-22'
+          created_at: '2020-06-22'
+        },
+        {
+          counting: 393,
+          created_at: '2020-06-27'
+        },
+        {
+          counting: 3972,
+          created_at: '2020-06-28'
         }
       ]
     }
