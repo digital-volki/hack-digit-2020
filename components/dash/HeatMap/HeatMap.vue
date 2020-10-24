@@ -6,6 +6,7 @@
 
 <script>
 import VuejsHeatmap from 'vuejs-heatmap'
+
 export default {
   name: 'HeatMap',
   components: {

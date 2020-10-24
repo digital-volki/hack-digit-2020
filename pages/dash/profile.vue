@@ -17,20 +17,20 @@
       <div class="d-block mt-5">
         Достижения
       </div>
-      <div v-for="i in 20" :key="i" class="d-flex  w-100 align-items-center">
+      <div v-for="(item, index) in awards" :key="index" class="d-flex  w-100 align-items-center">
         <div class="p-3">
-          <Fire />
+          <component :is="item.icon" />
         </div>
         <div class="flex-fill p-3">
-          Энтузиаст <br>
-          Учитесь 3 дня подряд<br>
+          {{ item.label }} <br>
+          {{ item.desc }}<br>
           <b-progress
             class="mt-2 rounded-pill"
             :max="100"
             height="2rem"
             show-value
           >
-            <b-progress-bar :value="30" variant="success" />
+            <b-progress-bar :value="item.value" variant="success" />
           </b-progress>
         </div>
       </div>
@@ -54,9 +54,12 @@
 </template>
 
 <script>
+
 import Fire from '../../components/icons/Fire'
 import Banner from '../../components/icons/Banner'
 import HeadProf from '../../components/prof/HeadProf'
+import CMMen from '../../components/icons/CMMen'
+import Star from '../../components/icons/Star'
 import HeatMap from '~/components/dash/HeatMap/HeatMap'
 
 export default {
@@ -64,8 +67,31 @@ export default {
   components: {
     HeadProf,
     Banner,
+    // eslint-disable-next-line vue/no-unused-components
     Fire,
     HeatMap
+  },
+  data () {
+    return {
+      awards: [
+        {
+          label: 'Комментатор',
+          desc: 'Оставь 20 комментариев',
+          icon: Fire,
+          value: 40
+        }, {
+          label: 'Комментатор',
+          desc: 'Оставить ещё 12 комментариев',
+          icon: CMMen,
+          value: 20
+        }, {
+          label: 'Ревизор',
+          desc: 'Поставь оценку 10 раз',
+          icon: Star,
+          value: 99
+        }
+      ]
+    }
   },
   layout: 'DashProfile'
 }
