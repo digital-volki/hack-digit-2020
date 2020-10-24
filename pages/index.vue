@@ -1,8 +1,8 @@
 <template>
   <div>
     main page
-    <nuxt-link to="/dash">
-      К дешборду
+    <nuxt-link to="/formreg">
+      К Регистрации
     </nuxt-link>
   </div>
 </template>
