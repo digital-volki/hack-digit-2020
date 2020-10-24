@@ -1,7 +1,7 @@
 <template>
   <div class="container-xl">
     <label class="MyCourses">Мои курсы</label> ><input type="text" class="imptNameCourseUpper" value="Олег Демиденко. Финансовая грамотность." readonly>
-    input type="text" class="imptNameCourse" value="Олег Демиденко. Финансовая грамотность." readonly>
+    <input type="text" class="imptNameCourse" value="Олег Демиденко. Финансовая грамотность." readonly>
     <!--    вставка видео -->
     <div class="videoCourse">
       <b-embed
