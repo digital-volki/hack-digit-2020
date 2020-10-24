@@ -109,11 +109,14 @@
         </div>
       </div>
     </div>
+    <Comments />
   </div>
 </template>
 
 <script>
+import Comments from '../../components/dash/Comments'
 export default {
+  components: { Comments },
   data () {
     return {
       courses: [
