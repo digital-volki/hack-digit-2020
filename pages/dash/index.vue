@@ -10,7 +10,7 @@
         </button>
       </div>
     </div>
-    <div class="row">
+    <div class="row container-xl">
       <nuxt-link v-for="i in 24" :key="i" to="/courPage/courPage" class="col-3">
         <Card :panel="isAdmin" />
       </nuxt-link>

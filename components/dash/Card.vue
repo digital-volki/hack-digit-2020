@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-3 text-dark">
+  <div class="mt-3 m-0 text-dark">
     <div class="card">
       <img src="/img/Rectangle%203.jpg" class="card-img-top" alt="img">
       <div class="card-body">

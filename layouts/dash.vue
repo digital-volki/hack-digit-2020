@@ -19,6 +19,10 @@
 import LeftSidebar from '~/components/dash/LeftSidebar'
 
 export default {
-  components: { LeftSidebar }
+  components: { LeftSidebar },
+  data () {
+    return {
+    }
+  }
 }
 </script>

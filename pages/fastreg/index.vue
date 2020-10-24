@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="fastreg">
-    <form class="fastreg-form-all">
+    <form class="fastreg-form-all" @submit.prevent="onSubmit">
       <div class="fastreg-form">
         <div class="fastreg-form-block">
           <input id="form-input" type="file" class="fastreg-form-input">
@@ -20,23 +20,52 @@
             <div>
               <label class="faster-form-email">Почта*</label>
               <br>
-              <input type="text" class="faster-form-input-email" placeholder="Введите вашу почту">
+              <input v-model="userAuth.login" type="text" class="faster-form-input-email" placeholder="Введите вашу почту">
             </div>
             <div>
               <label class="faster-form-password">Пароль*</label>
               <br>
-              <input type="text" class="faster-form-input-password" placeholder="Введите пароль">
+              <input v-model="userAuth.password" type="text" class="faster-form-input-password" placeholder="Введите пароль">
             </div>
           </div>
           <div class="fastreg-form-chek">
             <input type="checkbox">
             <label>Я принимаю условия <span class="faster-form-chek-link">Пользовского соглашения</span></label>
           </div>
-          <nuxt-link to="/dash">
-            <button type="submit" name="button" class="faster-form-reg-button">
-              Регистрация
-            </button>
-          </nuxt-link>
+          <VueTags v-model="tags">
+            <div
+              slot-scope="{tag_e,removeTag,inputEventHandlers,inputBindings }"
+              class=""
+            >
+              <input
+                class="form-control"
+                placeholder="Add tag..."
+                v-bind="inputBindings"
+                v-on="inputEventHandlers"
+              >
+              <div class="d-flex flex-wrap">
+                <div
+                  v-for="(tag, index) in tags"
+                  :key="index"
+                  class="d-flex "
+                >
+                  <button
+                    type="button"
+                    class="btn btn-light tags-input-remove"
+                    @click="removeTag(tag)"
+                  >
+                    <span>{{ tag }}</span>
+                    &times;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </VueTags>
+          <!--                    <nuxt-link>-->
+          <button type="submit" name="button" class="faster-form-reg-button">
+            Регистрация
+          </button>
+          <!--          </nuxt-link>-->
         </div>
       </div>
     </form>
@@ -44,7 +73,28 @@
 </template>
 
 <script>
+
+import VueTags from 'vue-tags'
+
 export default {
+  components: {
+    VueTags
+  },
+  data () {
+    return {
+      tags: ['Laravel', 'Vue js'],
+      userAuth: {
+        login: 'admin',
+        password: 'admin'
+      }
+    }
+  },
+  methods: {
+    onSubmit () {
+      // this.$store.dispatch('user/getUser', this.userAuth)
+      this.$router.push('/dash')
+    }
+  }
 }
 </script>
 
@@ -60,7 +110,6 @@ export default {
 }
 .fastreg-form{
   width: 282px;
-  height: 310px;
   position: relative;
 
 }
