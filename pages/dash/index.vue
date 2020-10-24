@@ -11,7 +11,9 @@
       </div>
     </div>
     <div class="row">
-      <Card v-for="i in 24" :key="i" :panel="isAdmin" />
+      <nuxt-link v-for="i in 24" :key="i" to="/dash/courseDetails" class="col-3">
+        <Card :panel="isAdmin" />
+      </nuxt-link>
     </div>
   </div>
 </template>

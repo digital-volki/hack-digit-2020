@@ -32,9 +32,11 @@
             <input type="checkbox">
             <label>Я принимаю условия <span class="faster-form-chek-link">Пользовского соглашения</span></label>
           </div>
-          <button type="submit" name="button" class="faster-form-reg-button">
-            Регистрация
-          </button>
+          <nuxt-link to="/dash">
+            <button type="submit" name="button" class="faster-form-reg-button">
+              Регистрация
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </form>
