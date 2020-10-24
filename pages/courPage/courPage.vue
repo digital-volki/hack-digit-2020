@@ -79,7 +79,7 @@
             <div class="main-info-img">
               <div class="main-info-img">
                 <div>
-                  <img src="../../static/img/icon.svg" alt="">
+                  <img src="@/static/img/raitng.svg" alt="">
                   <span class="info-page">Рейтинг</span>
                 </div>
                 <div>
