@@ -37,7 +37,7 @@
       </div>
     </nav>
     <div class="info-button">
-      <nuxt-link to="/">
+      <nuxt-link to="/courseAd/curAd">
         <button type="button" name="button" class="button-info">
           Информация
         </button>
