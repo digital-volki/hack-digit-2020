@@ -5,7 +5,7 @@
       <tbody>
       <tr>
         <td><div class="nameAlert"><h1><img src="/img/dobro.svg" alt="logo"> DOBRO.RU</h1></div></td>
-        <td class="d-flex"><div class="discriptionAlert"><h2>Еженедельный дайджест новостей <span>  Стартовало народное голосование за лучшие проекты...</span></h2></div></td>
+        <td class="d-flex"> <nuxt-link class="btnAlertProryv" to="/dash/dobro" ><div class="discriptionAlert"><h2>Еженедельный дайджест новостей <span>  Стартовало народное голосование за лучшие проекты...</span></h2></div></nuxt-link></td>
         <td>
           <button class="btnClose">
             <Close />
@@ -14,7 +14,7 @@
       </tr>
       <tr>
         <td><div class="nameAlert"><h1> <img src="/img/proryv.svg" alt="logo"> Цифровой прорыв</h1></div></td>
-        <td><div class="discriptionAlert"><h2>Хочешь победить в Цифровом прорыве?<span> Прокачай навыки презентации проекта! В рамках...</span></h2></div></td>
+        <td><nuxt-link class="btnAlertProryv" to="/dash/proryv"><div class="discriptionAlert"><h2>   Хочешь победить в Цифровом прорыве?<span> Прокачай навыки презентации проекта! В рамках...</span></h2></div></nuxt-link></td>
         <td>
           <button class="btnClose">
             <Close />
@@ -23,7 +23,7 @@
       </tr>
       <tr>
         <td><div class="nameAlert"><h1><img src="/img/dobro.svg" alt="logo"> DOBRO.RU</h1></div></td>
-        <td class="d-flex"><div class="discriptionAlert"><h2>Еженедельный дайджест новостей <span>  Стартовало народное голосование за лучшие проекты...</span></h2></div></td>
+        <td class="d-flex"> <nuxt-link class="btnAlertProryv" to="/dash/dobro"><div class="discriptionAlert"><h2>Еженедельный дайджест новостей <span>  Стартовало народное голосование за лучшие проекты...</span></h2></div></nuxt-link></td>
         <td>
           <button class="btnClose">
             <Close />
@@ -78,4 +78,10 @@ export default {
   h4{
     font-size: 24px;
   }
+  .btnAlertProryv{
+    border: none;
+    background: none;
+    outline: none;
+  }
+
 </style>
