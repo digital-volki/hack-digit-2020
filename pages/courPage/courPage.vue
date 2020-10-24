@@ -81,10 +81,28 @@
                   <span class="info-page">Рейтинг</span>
                 </div>
                 <div>
-                  <span class="info-page">4.8</span>
+                  <span class="info-page"> <img src="@/static/img/Group343.svg" alt="">Info.raiting</span>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="course-topic-page">
+        <div class="topic-curse-head">
+          Этапы курсов
+        </div>
+        <div v-for="(course,index) in courses" :key="index" class="topic-course-card-all">
+          <div class="topic-course-card">
+            <span class="Number">{{ course.number }}</span>
+            <span class="Title">{{ course.name }}</span>
+            <div class="Time">
+              <img src="@/static/img/time.svg" alt="">
+              <span class="time-text">{{ course.time }}</span>
+            </div>
+          </div>
+          <div class="proces">
+            В процессе
           </div>
         </div>
       </div>
@@ -94,6 +112,22 @@
 
 <script>
 export default {
+  data () {
+    return {
+      courses: [
+        {
+          number: '1',
+          name: 'Теория грамотности',
+          time: '01:05:44'
+        },
+        {
+          number: '2',
+          name: 'Тест "Финансовая грамотность"',
+          time: '00:26:44'
+        }
+      ]
+    }
+  },
   layout: 'dash'
 }
 </script>
@@ -172,6 +206,10 @@ export default {
   border-radius: 4.8px;
   color:#fff;
 }
+.course-page-info-and-course{
+  display: flex;
+  justify-content: space-between;
+}
 .course-page-info{
   width: 540px;
   height: 262px;
@@ -211,5 +249,76 @@ font-size: 16px;
 line-height: 120%;
 margin-left: 10px;
 color: #212529;
+}
+.course-topic-page{
+  width: 540px;
+  height:262px;
+  border: 2px solid #DFDFDF;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+.topic-curse-head{
+  margin-left: 32px;
+  margin-top: 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  display: flex;
+  align-items: flex-end;
+  color: #212529;
+}
+.topic-course-card-all{
+  width: 476px;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #DFDFDF;
+  margin-top: 24px;
+  margin-bottom: -24px;
+  margin-left: 32px;
+}
+.topic-course-card{
+  margin-left: 16px;
+  margin-top: 12px;
+}
+.Number{
+  padding-top:1px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: #84CD8B;
+  color:#fff;
+  border-radius: 4px;
+}
+.Title{
+  margin-left: 10px;
+}
+.Time{
+  margin-top: 8px;
+}
+.time-text{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 120%;
+  margin-left: 7px;
+  color: #212529;
+}
+.proces{
+  width: 75px;
+  height: 18px;
+  margin-top: 15px;
+  margin-right: 30px;
+  background: #84CD8B;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 1px;
 }
 </style>

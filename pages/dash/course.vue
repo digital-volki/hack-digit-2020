@@ -7,7 +7,7 @@
           Мои курсы
         </h3>
         <div class="my-course-all-component">
-          <div v-for="(item, index) in items" :key="index" class="my-course-component">
+          <div v-for="(item, index) in items" :key="index" :Info="item" class="my-course-component">
             <img :src="`/img/${item.img}`" alt="">
             <div class="my-course-component-text">
               <div>
