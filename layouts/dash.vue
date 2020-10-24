@@ -15,7 +15,8 @@
 }
 </style>
 <script>
-import LeftSidebar from '@/components/dash/LeftSidebar'
+
+import LeftSidebar from '~/components/dash/LeftSidebar'
 
 export default {
   components: { LeftSidebar }
