@@ -5,7 +5,9 @@
         &#60;
       </div>
     </nuxt-link>
-    <div class="nameAlert"><h1><img src="/img/dobro.svg" alt="logo"> DOBRO.RU</h1></div>
+    <div class="nameAlert">
+      <h1><img src="/img/dobro.svg" alt="logo"> DOBRO.RU</h1>
+    </div>
     <div class="form">
       <h7>Привет!</h7>
       <br>
@@ -23,11 +25,26 @@
         <br>
         <br>
         Также напоминаем, что дедлайн подачи заявок на участие - 12 сентября 23:59 по МСК. Поэтому топоропись, такое событие пропускать нельзя!
-        <div class="btnReady">
-          <button type="button" class="btn btn-success">
+        <div class="btnReady" data-target="#mm" data-toggle="modal">
+          <b-button class="btn btn-success" v-b-modal.modal-1>
             Учавствовать
-          </button>
+          </b-button>
         </div>
+      </div>
+    </div>
+    <div
+      id="mm"
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modalForm">
+
+        <b-modal id="modal-1" title="Сообщение" ok-only>
+          <p class="my-4">Вы зарегистрированы на мероприятие</p>
+        </b-modal>
       </div>
     </div>
   </div>
@@ -93,5 +110,8 @@ export default {
     outline: none;
     border: none;
     font-size: 20px;
+  }
+  .modalForm{
+    margin-top: 300px;
   }
 </style>
