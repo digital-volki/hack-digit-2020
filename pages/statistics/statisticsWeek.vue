@@ -37,141 +37,255 @@
       </div>
     </nav>
     <div class="all-course">
-      <div class="popular-course">
-        <span class="popular-course-text">
-          <h3 class="popular-course-title">
-            популярный курс
-          </h3>
-          <h3 class="popular-course-look">
-            Показать по 5
-            <img src="@/static/img/arrow.svg">
-          </h3>
-        </span>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th class="table-course" scope="col">
-                Курс
-              </th>
-              <th scope="col" class="number-man">
-                Количество записавшихся
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <nuxt-link to="/">
-                <td>Secaton 2018</td>
-              </nuxt-link>
-              <td>10000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>Будь в курсе</td>
-              </nuxt-link>
-              <td>9000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>Здоровые дети</td>
-              </nuxt-link>
-              <td>8000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>Здоровые дети</td>
-              </nuxt-link>
-              <td>5000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>Здоровые дети</td>
-              </nuxt-link>
-              <td>4000</td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col" class="table-course">
-                Курс
-              </th>
-              <th scope="col" class="number-man">
-                Количество записавшихся
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <nuxt-link to="/">
-                <td>Secaton 2018</td>
-              </nuxt-link>
-              <td>10000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>
-                  Будь в курсе
-                </td>
-              </nuxt-link>
-              <td>9000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>Здоровые дети</td>
-              </nuxt-link>
-              <td>8000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>Здоровые дети</td>
-              </nuxt-link>
-              <td>5000</td>
-            </tr>
-            <tr>
-              <nuxt-link to="/">
-                <td>Здоровые дети</td>
-              </nuxt-link>
-              <td>4000</td>
-            </tr>
-          </tbody>
-        </table>
+      <div>
+        <div class="popular-course-rus">
+          <span class="popular-course-text">
+            <h3 class="popular-course-title">
+              Лидеры России
+            </h3>
+            <h3 class="popular-course-look">
+              Показать по 5
+              <img src="@/static/img/arrow.svg">
+            </h3>
+          </span>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="table-course" scope="col">
+                  Курс
+                </th>
+                <th scope="col" class="number-man">
+                  Количество записавшихся
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Secaton 2018</td>
+                </nuxt-link>
+                <td>10000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Будь в курсе</td>
+                </nuxt-link>
+                <td>9000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>8000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>5000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>4000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="popular-course">
+          <span class="popular-course-text">
+            <h3 class="popular-course-title">
+              популярный курс
+            </h3>
+            <h3 class="popular-course-look">
+              Показать по 5
+              <img src="@/static/img/arrow.svg">
+            </h3>
+          </span>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="table-course" scope="col">
+                  Курс
+                </th>
+                <th scope="col" class="number-man">
+                  Количество записавшихся
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Secaton 2018</td>
+                </nuxt-link>
+                <td>10000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Будь в курсе</td>
+                </nuxt-link>
+                <td>9000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>8000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>5000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>4000</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col" class="table-course">
+                  Курс
+                </th>
+                <th scope="col" class="number-man">
+                  Количество записавшихся
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Secaton 2018</td>
+                </nuxt-link>
+                <td>10000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>
+                    Будь в курсе
+                  </td>
+                </nuxt-link>
+                <td>9000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>8000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>5000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>4000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="popular-course-suc">
+          <span class="popular-course-text">
+            <h3 class="popular-course-title">
+              Успешные курсы
+            </h3>
+            <h3 class="popular-course-look">
+              Показать по 5
+              <img src="@/static/img/arrow.svg">
+            </h3>
+          </span>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="table-course" scope="col">
+                  Курс
+                </th>
+                <th scope="col" class="number-man">
+                  Количество записавшихся
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Secaton 2018</td>
+                </nuxt-link>
+                <td>10000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Будь в курсе</td>
+                </nuxt-link>
+                <td>9000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>8000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>5000</td>
+              </tr>
+              <tr>
+                <nuxt-link to="/">
+                  <td>Здоровые дети</td>
+                </nuxt-link>
+                <td>4000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div>
-        <div class="visit-server">
-          <h3 class="popular-course-text popular-course-title">
-            Посещение сервера
-          </h3>
-          <span class="info-viit-serve">
-            <span>
-              <p class="time-info">24 мин</p>
-              <p class="time-text">время нахождения на сайте</p>
+        <div>
+          <div class="visit-server">
+            <h3 class="popular-course-text popular-course-title">
+              Посещение сервера
+            </h3>
+            <span class="info-viit-serve">
+              <span>
+                <p class="time-info">24 мин</p>
+                <p class="time-text">время нахождения на сайте</p>
+              </span>
+              <span class="text-info-visit">
+                <p class="time-info">1024</p>
+                <p class="time-text">посетило людей сайт</p>
+              </span>
             </span>
-            <span class="text-info-visit">
-              <p class="time-info">1024</p>
-              <p class="time-text">посетило людей сайт</p>
-            </span>
-          </span>
-          <div class="stata">
-            в
+            <div class="stata">
+              в
+            </div>
+            <button type="button" name="button" class="detail-info">
+              Детали <img src="@/static/img/arrow-right.svg" alt="" class="img-arrow">
+            </button>
           </div>
-          <button type="button" name="button" class="detail-info">
-            Детали <img src="@/static/img/arrow-right.svg" alt="" class="img-arrow">
-          </button>
-        </div>
-        <div class="info-reg">
-          <h3 class="popular-course-text popular-course-title">
-            зарегистрированные
-          </h3>
-          <span class="reg-text">
-            <p class="fullreg-number">
-              1000 из 2400 чел.
-            </p>
-            <p class="fullreg-text">
-              Полная регистрация
-            </p>
-          </span>
+          <div class="info-reg">
+            <h3 class="popular-course-text popular-course-title">
+              зарегистрированные
+            </h3>
+            <span class="reg-text">
+              <p class="fullreg-number">
+                1000 из 2400 чел.
+              </p>
+              <p class="fullreg-text">
+                Полная регистрация
+              </p>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -240,6 +354,22 @@ export default {
 .popular-course{
   width:608px;
   height: 841px;
+  border: 2px solid #DFDFDF;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.popular-course-rus{
+  width:608px;
+  height: 501px;
+  margin-bottom: 20px;
+  border: 2px solid #DFDFDF;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.popular-course-suc{
+  width:608px;
+  height: 501px;
+  margin-top: 20px;
   border: 2px solid #DFDFDF;
   box-sizing: border-box;
   border-radius: 8px;
