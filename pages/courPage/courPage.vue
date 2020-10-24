@@ -5,7 +5,7 @@
     </h1>
     <div class="course-page-topic">
       <div class="course-page-topic-img">
-        <img src="@/static/img/365291.svg" alt="">
+        <img src="/img/prev.jpg" alt="">
       </div>
       <div class="course-page-topic-info">
         <span>
@@ -14,27 +14,29 @@
           </nuxt-link>
         </span>
         <span>
-          >Региональная школа социальных инициатив #RE_project
+          >ШРИ (Школа разаработки интерфейсов)
         </span>
         <p class="course-page-topic-title">
-          Олег Демидович. Финансовая грамотность
+          Александр Сокирка. Продвинутая разработка Web и PWA приложений
         </p>
         <div class="many-text">
           <p class="many-text-component">
-            Научитесь контролировать свои расходы и доходы, планировать и приумножать свой бюджет. Спикер Олег Демиденко, исполнительный директор по маркетингу блока «Сеть Продаж» ПАО «Сбербанк», провел урок по финансовой грамотности.
+            Этот курс уроков по программированию. Автором канала является веб разработчик, Александр Сокирка, который по мимо всего перечисленного публикует видео VLOG, и тем самым любой подписчик может узнать как живут и чем занимаются программисты день за днем.
           </p>
           <p class="many-text-component">
             Что вы узнаете на вебинаре: <br>
-            - как грамотно и эффективно планировать финансы;<br>
-            - как сберегать и накапливать свой бюджет;<br>
-            - какие современные мобильные приложения можно использовать для учета личного бюджета.
+            - как грамотно проектировать аритектуру приложений;<br>
+            - как стилизировать интерфейсыы;<br>
+            - как современные мобильные приложения можно собирать из web версии.
           </p>
           <p class="many-text-component">
-            Бесплатный вебинар будет интересен тем, кто хочет научиться грамотно распределять свой бюджет
+            Бесплатный вебинар будет интересен тем, кто хочет научиться писать фронт.
           </p>
-          <button type="button" name="button" class="course-page-button">
-            Записаться на курс
-          </button>
+          <nuxt-link to="/dash/courseDetails">
+            <button type="button" name="button" class="course-page-button">
+              Записаться на курс
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -59,7 +61,7 @@
                   <span class="info-page">Спикер</span>
                 </div>
                 <div>
-                  <span class="info-page">Олег</span>
+                  <span class="info-page">Александр</span>
                 </div>
               </div>
             </div>
@@ -77,7 +79,7 @@
             <div class="main-info-img">
               <div class="main-info-img">
                 <div>
-                  <img src="../../static/img/icon.svg" alt="">
+                  <img src="@/static/img/raitng.svg" alt="">
                   <span class="info-page">Рейтинг</span>
                 </div>
                 <div>
@@ -107,22 +109,25 @@
         </div>
       </div>
     </div>
+    <Comments />
   </div>
 </template>
 
 <script>
+import Comments from '../../components/dash/Comments'
 export default {
+  components: { Comments },
   data () {
     return {
       courses: [
         {
           number: '1',
-          name: 'Теория грамотности',
+          name: 'Фронтенд. Rect Query',
           time: '01:05:44'
         },
         {
           number: '2',
-          name: 'Тест "Финансовая грамотность"',
+          name: 'Тест "Теория. Node Auth"',
           time: '00:26:44'
         }
       ]
@@ -155,7 +160,7 @@ export default {
   display: flex;
 }
 .course-page-topic-img{
-  margin-top: 32px;
+  margin-top: 50px;
 }
 .course-page-topic-info{
   margin-top: 32px;

@@ -13,7 +13,7 @@
       <img src="/ex/avatar.png" class="" alt="avatar">
       <div class="flex-column flex-fill">
         <div class="ml-2">
-          Даниил Морозов
+          {{ `${user.lastname} ${user.firstname}` }}
         </div>
         <div class="ml-2 link">
           Перейти в профиль
@@ -76,6 +76,9 @@ export default {
     Calendar,
     Back
   },
+  // async fetch ({ store }) {
+  //   await store.dispatch('user/getUser')
+  // },
   data () {
     return {
       links: [{
@@ -104,12 +107,17 @@ export default {
         isAdmin: false
       }, {
         name: 'Статистика',
-        to: '/dash/stats',
+        to: '/statisticAdmin/statAdDay',
         icon: Stats,
         countNotification: 0,
         isAdmin: !this.$route.query.admin
       }],
       color: 'white'
+    }
+  },
+  computed: {
+    user () {
+      return this.$store.state.user.user
     }
   }
 }

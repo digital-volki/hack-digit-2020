@@ -26,7 +26,7 @@
         <br>
         Также напоминаем, что дедлайн подачи заявок на участие - 12 сентября 23:59 по МСК. Поэтому топоропись, такое событие пропускать нельзя!
         <div class="btnReady" data-target="#mm" data-toggle="modal">
-          <b-button class="btn btn-success" v-b-modal.modal-1>
+          <b-button v-b-modal.modal-1 class="btn btn-success">
             Учавствовать
           </b-button>
         </div>
@@ -41,9 +41,10 @@
       aria-hidden="true"
     >
       <div class="modalForm">
-
         <b-modal id="modal-1" title="Сообщение" ok-only>
-          <p class="my-4">Вы зарегистрированы на мероприятие</p>
+          <p class="my-4">
+            Вы зарегистрированы на мероприятие
+          </p>
         </b-modal>
       </div>
     </div>

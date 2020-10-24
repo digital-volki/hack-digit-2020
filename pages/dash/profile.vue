@@ -1,6 +1,7 @@
 <template>
   <div class="p-5 d-flex w-100">
     <div class="w-100">
+      <HeadProf />
       <div class="d-block">
         Активность за последний год
       </div>
@@ -49,11 +50,13 @@
 <script>
 import Fire from '../../components/icons/Fire'
 import Banner from '../../components/icons/Banner'
+import HeadProf from '../../components/prof/HeadProf'
 import HeatMap from '~/components/dash/HeatMap/HeatMap'
 
 export default {
   name: 'Profile',
   components: {
+    HeadProf,
     Banner,
     Fire,
     HeatMap

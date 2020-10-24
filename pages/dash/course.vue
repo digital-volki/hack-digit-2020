@@ -23,7 +23,7 @@
             </div>
             <div class="my-course-ass">
               <button type="button" class="img-arrow-down" @click="item.isDrop = !item.isDrop">
-                <img src="@/static/img/icon.svg" alt="">
+                <img src="@/static/img/arrow.svg" alt="">
               </button>
               <div v-if="item.isDrop" class="dropdown">
                 <nuxt-link to="/" class="dropdown-text">
