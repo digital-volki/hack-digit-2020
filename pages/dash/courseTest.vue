@@ -2,7 +2,7 @@
   <div>
     <label class="MyCourses">Мои курсы</label> ><input type="text" class="imptNameCourseUpper" value="Олег Демиденко. Финансовая грамотность." readonly>
     <br>
-    <input type="text" class="imptNameCourse" value="Олег Демиденко. Финансовая грамотность." readonly>
+    <input type="text" class="imptNameCourse" value="Основы Webpack" readonly>
     <p>
       <button v-for="i in questions.length" :key="i" class="m-2" :class="[i-1 < answers.length ? answers[i-1] === questions[i].right ? 'btnTestnumber': 'btn-danger' : 'btn-sec']" type="button">
         {{ i }}
@@ -15,7 +15,7 @@
           <button
             v-for="(item, index) in questions[answers.length].answers"
             :key="index"
-            class="btn btn-success"
+            class="btn btn-success m-2"
             square
             border
             :active="active == index"
@@ -26,28 +26,13 @@
         </div>
       </div>
       <div class="btntest">
-        <vs-row>
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="2" />
-
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="3" />
-
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="2" />
-
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="5" class="Dalee">
-            <vs-button
-              color="#7E72F2"
-              @click="addAnswer"
-            >
-              <div class="GoTestBtn">
-                <b-button variant="success">
-                  Далее
-                </b-button>
-              </div>
-            </vs-button>
-          </vs-col>
-        </vs-row>
+        <vs-button
+          color="#7E72F2"
+          @click="addAnswer"
+        >
+          Далее
+        </vs-button>
       </div>
-      <div class="whtbg" />
       <Comments />
     </div>
   </div>
@@ -65,12 +50,12 @@ export default {
     answers: [],
     questions: [
       {
-        str: 'Что тебе нравится?',
-        answers: ['Помогать больным людям',
-          'Чинить машины',
-          'Учить младшекласников',
-          'Убираться',
-          'Составлять таблицы, схемы вычислительных машин'],
+        str: 'Какой язык используется для вёрстки?',
+        answers: ['CSS',
+          'html',
+          'SCSS',
+          'SASS',
+          'JS'],
         right: 1
       },
       {

@@ -41,6 +41,16 @@ export const actions = {
   async getUser ({ commit }, obj) {
     try {
       const resp = await this.$axios.$get(`${RootURL}?module=auth&login=${obj.login}&password=${obj.password}`)
+      await commit('SET_USER', resp)
+      await this.$cookies.set('token', resp.token)
+      await this.$router.push('/dash')
+    } catch (e) {
+
+    }
+  },
+  async getInfo ({ commit }, obj) {
+    try {
+      const resp = await this.$axios.$get(`${RootURL}?module=auth&login=${obj.login}&password=${obj.password}`)
       commit('SET_USER', resp)
     } catch (e) {
 

@@ -1,19 +1,19 @@
 import moment from 'moment'
 import * as d3 from 'd3'
 
-export let calendarHeatmap = {
-  init() {
+export const calendarHeatmap = {
+  init () {
     // defaults
     let width = 750
     let height = 110
-    let legendWidth = 150
+    const legendWidth = 150
     let selector = '.vuejs-heatmap'
-    let SQUARE_LENGTH = 11
-    let SQUARE_PADDING = 2
-    let MONTH_LABEL_PADDING = 6
+    const SQUARE_LENGTH = 11
+    const SQUARE_PADDING = 2
+    const MONTH_LABEL_PADDING = 6
     let now = moment().endOf('day').toDate()
     let yearAgo = moment().startOf('day').subtract(1, 'year').toDate()
-    let startDate = null
+    const startDate = null
     let data = []
     let max = null
     let colorRange = ['#D8E6E7', '#218380']
@@ -21,7 +21,7 @@ export let calendarHeatmap = {
     let tooltipUnit = 'Star'
     let legendEnabled = true
     let onClick = null
-    let weekStart = 0 //0 for Sunday, 1 for Monday
+    const weekStart = 0 // 0 for Sunday, 1 for Monday
     let locale = {
       months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
@@ -55,7 +55,6 @@ export let calendarHeatmap = {
       height = value
       return chart
     }
-
 
     chart.max = function (value) {
       if (!arguments.length) { return max }
@@ -112,20 +111,19 @@ export let calendarHeatmap = {
       return chart
     }
 
-    function chart() {
-
+    function chart () {
       d3.select(chart.selector()).selectAll('svg.calendar-heatmap').remove() // remove the existing chart, if it exists
 
-      let dateRange = d3.time.days(yearAgo, now) // generates an array of date objects within the specified range
-      let monthRange = d3.time.months(moment(yearAgo).startOf('month').add(1, 'month').toDate(), now) // it ignores the first month if the 1st date is after the start of the month
-      let firstDate = moment(dateRange[0])
+      const dateRange = d3.time.days(yearAgo, now) // generates an array of date objects within the specified range
+      const monthRange = d3.time.months(moment(yearAgo).startOf('month').add(1, 'month').toDate(), now) // it ignores the first month if the 1st date is after the start of the month
+      const firstDate = moment(dateRange[0])
 
       if (max === null) {
         max = d3.max(chart.data(), function (d) { return d.count })
       } // max data value
 
       // color range
-      let color = d3.scale.linear()
+      const color = d3.scale.linear()
         .range(chart.colorRange())
         .domain([0, max])
 
@@ -134,8 +132,8 @@ export let calendarHeatmap = {
 
       drawChart()
 
-      function drawChart() {
-        let svg = d3.select(chart.selector())
+      function drawChart () {
+        const svg = d3.select(chart.selector())
           .style('position', 'relative')
           .append('svg')
           .attr('width', width)
@@ -144,16 +142,16 @@ export let calendarHeatmap = {
           .style('padding', '36px')
 
         dayRects = svg.selectAll('.day-cell')
-          .data(dateRange)  //  array of days for the last yr
+          .data(dateRange) //  array of days for the last yr
 
         dayRects.enter().append('rect')
           .attr('class', 'day-cell')
           .attr('width', SQUARE_LENGTH)
           .attr('height', SQUARE_LENGTH)
-          .attr('fill', function(d) { return color(countForDate(d)) })
+          .attr('fill', function (d) { return color(countForDate(d)) })
           .attr('x', function (d, i) {
-            let cellDate = moment(d)
-            let result = cellDate.week() - firstDate.week() + (firstDate.weeksInYear() * (cellDate.weekYear() - firstDate.weekYear()))
+            const cellDate = moment(d)
+            const result = cellDate.week() - firstDate.week() + (firstDate.weeksInYear() * (cellDate.weekYear() - firstDate.weekYear()))
             return result * (SQUARE_LENGTH + SQUARE_PADDING)
           })
           .attr('y', function (d, i) {
@@ -162,7 +160,7 @@ export let calendarHeatmap = {
 
         if (typeof onClick === 'function') {
           dayRects.on('click', function (d) {
-            let match = matchForDate(d)
+            const match = matchForDate(d)
             onClick({ date: d, count: match.count, entry: match.entry })
           })
         }
@@ -184,12 +182,12 @@ export let calendarHeatmap = {
         }
 
         if (chart.legendEnabled()) {
-          let colorRange = [color(0)]
+          const colorRange = [color(0)]
           for (let i = 3; i > 0; i--) {
             colorRange.push(color(max / i))
           }
 
-          let legendGroup = svg.append('g')
+          const legendGroup = svg.append('g')
           legendGroup.selectAll('.calendar-heatmap-legend')
             .data(colorRange)
             .enter()
@@ -215,7 +213,7 @@ export let calendarHeatmap = {
         }
 
         dayRects.exit().remove()
-        let monthLabels = svg.selectAll('.month')
+        const monthLabels = svg.selectAll('.month')
           .data(monthRange)
           .enter().append('text')
           .attr('class', 'month-name')
@@ -232,7 +230,7 @@ export let calendarHeatmap = {
 
             return Math.floor(matchIndex / 7) * (SQUARE_LENGTH + SQUARE_PADDING)
           })
-          .attr('y', 0)  // fix these to the top
+          .attr('y', 0) // fix these to the top
 
         locale.days.forEach(function (day, index) {
           index = formatWeekday(index)
@@ -248,12 +246,12 @@ export let calendarHeatmap = {
       }
 
       function pluralizedTooltipUnit (count) {
-        if ('string' === typeof tooltipUnit) {
+        if (typeof tooltipUnit === 'string') {
           return (tooltipUnit + (count === 1 ? '' : 's'))
         }
-        for (let i in tooltipUnit) {
-          let _rule = tooltipUnit[i]
-          let _min = _rule.min
+        for (const i in tooltipUnit) {
+          const _rule = tooltipUnit[i]
+          const _min = _rule.min
           let _max = _rule.max || _rule.min
           _max = _max === 'Infinity' ? Infinity : _max
           if (count >= _min && count <= _max) {
@@ -262,15 +260,15 @@ export let calendarHeatmap = {
         }
       }
 
-      function tooltipHTMLForDate(d) {
-        let dateStr = moment(d).format('ddd, MMM Do YYYY')
-        let count = countForDate(d)
-        return '<span><strong>' + (count ? count : locale.No) + ' ' + pluralizedTooltipUnit(count) + '</strong> ' + locale.on + ' ' + dateStr + '</span>'
+      function tooltipHTMLForDate (d) {
+        const dateStr = moment(d).format('ddd, MMM Do YYYY')
+        const count = countForDate(d)
+        return '<span><strong>' + (count || locale.No) + ' ' + pluralizedTooltipUnit(count) + '</strong> ' + locale.on + ' ' + dateStr + '</span>'
       }
 
-      function countForDate(d) {
+      function countForDate (d) {
         let count = 0
-        let match = chart.data().findForHeatmap(function (element, index) {
+        const match = chart.data().findForHeatmap(function (element, index) {
           return moment(element.date).isSame(d, 'day')
         })
         if (match) {
@@ -279,15 +277,15 @@ export let calendarHeatmap = {
         return count
       }
 
-      function matchForDate(d) {
-        let count = 0
-        let match = chart.data().findForHeatmap(function (element, index) {
+      function matchForDate (d) {
+        const count = 0
+        const match = chart.data().findForHeatmap(function (element, index) {
           return moment(element.date).isSame(d, 'day')
         })
         return match
       }
 
-      function formatWeekday(weekDay) {
+      function formatWeekday (weekDay) {
         if (weekStart === 1) {
           if (weekDay === 0) {
             return 6
@@ -298,12 +296,12 @@ export let calendarHeatmap = {
         return weekDay
       }
 
-      let daysOfChart = chart.data().map(function (day) {
+      const daysOfChart = chart.data().map(function (day) {
         return day.date.toDateString()
       })
 
       dayRects.filter(function (d) {
-        return daysOfChart.indexOf(d.toDateString()) > -1
+        return daysOfChart.includes(d.toDateString())
       }).attr('fill', function (d, i) {
         return color(chart.data()[i].count)
       })
@@ -323,9 +321,9 @@ if (!Array.prototype.findForHeatmap) {
     if (typeof predicate !== 'function') {
       throw new TypeError('predicate must be a function')
     }
-    let list = Object(this)
-    let length = list.length >>> 0
-    let thisArg = arguments[1]
+    const list = Object(this)
+    const length = list.length >>> 0
+    const thisArg = arguments[1]
     let value
 
     for (let i = 0; i < length; i++) {

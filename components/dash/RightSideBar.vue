@@ -23,10 +23,10 @@ export default {
     return {
       itemActive: 'teo_fin',
       listThemes: [{
-        name: 'Теория “Финансовая',
+        name: 'Фронтенд. Rect Query',
         id: 'teo_fin',
         sub: [{
-          name: 'Тест “Финансовая',
+          name: 'Теория. Node Auth',
           id: 'test_fin'
         }]
       }]

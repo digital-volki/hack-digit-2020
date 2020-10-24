@@ -91,8 +91,8 @@ export default {
   },
   methods: {
     onSubmit () {
-      // this.$store.dispatch('user/getUser', this.userAuth)
-      this.$router.push('/dash')
+      this.$store.dispatch('user/getUser', this.userAuth)
+      // this.$nuxt.$router.push('/dash')
     }
   }
 }

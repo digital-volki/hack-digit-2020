@@ -35,9 +35,6 @@ export default {
   components: {
     Fastreg
   },
-  // async fetch ({ store }) {
-  //   await store.dispatch('user/getUser')
-  // },
   data () {
     return {
       isActive: true
