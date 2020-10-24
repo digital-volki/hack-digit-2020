@@ -22,22 +22,22 @@
               </div>
             </div>
             <div class="my-course-ass">
-                <button type="button" class="img-arrow-down" @click="item.isDrop = !item.isDrop">
-                  <img src="@/static/img/icon.svg" alt="">
-                </button>
-                <div class="dropdown" v-if="item.isDrop">
-                  <nuxt-link to="/" class="dropdown-text">
-                    Покинуть
-                  </nuxt-link>
-                  <nuxt-link to="/" class="dropdown-text1">
-                    Поделиться
-                  </nuxt-link>
-                </div>
+              <button type="button" class="img-arrow-down" @click="item.isDrop = !item.isDrop">
+                <img src="@/static/img/icon.svg" alt="">
+              </button>
+              <div v-if="item.isDrop" class="dropdown">
+                <nuxt-link to="/" class="dropdown-text">
+                  Покинуть
+                </nuxt-link>
+                <nuxt-link to="/" class="dropdown-text1">
+                  Поделиться
+                </nuxt-link>
+              </div>
               <br>
               <div class="my-course-ass-raiting">
                 <img src="@/static/img/Group343.svg" alt="">
                 <p class="my-course-ass-raiting-number">
-                  4.8
+                  {{ item.raiting }}
                 </p>
                 <img src="@/static/img/user.svg" alt="" class="img">
                 <p class="my-course-ass-raiting-number">
@@ -66,19 +66,22 @@ export default {
           isDrop: false,
           course: 'Финансовая грамотность',
           name: 'Дмитрий Александрович',
-          img: 'Group341.svg'
+          img: 'Group341.svg',
+          raiting: '4.8'
         },
         {
           isDrop: false,
           course: 'Финансовая грамотность',
           name: 'Дмитрий Александрович',
-          img: 'Group341.svg'
+          img: 'Group341.svg',
+          raiting: '4.8'
         },
         {
           isDrop: false,
           course: 'Финансовая грамотность',
           name: 'Дмитрий Александрович',
-          img: 'Group341.svg'
+          img: 'Group341.svg',
+          raiting: '4.8'
         }
       ]
     }
