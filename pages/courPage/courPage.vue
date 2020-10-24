@@ -32,9 +32,11 @@
           <p class="many-text-component">
             Бесплатный вебинар будет интересен тем, кто хочет научиться грамотно распределять свой бюджет
           </p>
-          <button type="button" name="button" class="course-page-button">
-            Записаться на курс
-          </button>
+          <nuxt-link to="/dash/courseDetails">
+            <button type="button" name="button" class="course-page-button">
+              Записаться на курс
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </div>

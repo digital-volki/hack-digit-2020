@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row">
-      <nuxt-link v-for="i in 24" :key="i" to="/dash/courseDetails" class="col-3">
+      <nuxt-link v-for="i in 24" :key="i" to="/courPage/courPage" class="col-3">
         <Card :panel="isAdmin" />
       </nuxt-link>
     </div>
@@ -36,6 +36,9 @@ export default {
 </script>
 
 <style scoped>
+a{
+  text-decoration: none !important;
+}
 div {
   font-size: 35px;
 }

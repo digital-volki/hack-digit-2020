@@ -48,13 +48,16 @@
         </vs-row>
       </div>
       <div class="whtbg" />
+      <Comments />
     </div>
   </div>
 </template>
 
 <script>
+import Comments from '../../components/dash/Comments'
 export default {
   name: 'CourseTest',
+  components: { Comments },
   layout: 'DashCourse',
   data: () => ({
     tableview: false,
@@ -101,7 +104,7 @@ export default {
         if (this.tableview === false) {
           this.tableview = true
         } else {
-          this.$nuxt.$router.push('/dash/courseDetails')
+          this.$nuxt.$router.push('/dash')
         }
       } else {
         this.answers.push(this.active)

@@ -18,19 +18,24 @@
           Влад смотри сюда
         </b-col>
         <b-col cols="4" class="Next">
-          <b-button class="btnNext" variant="success">
-            Следующий шаг >
-          </b-button>
+          <nuxt-link to="/dash/courseTest">
+            <b-button class="btnNext" variant="success">
+              Следующий шаг >
+            </b-button>
+          </nuxt-link>
         </b-col>
       </b-row>
     </b-container>
+    <Comments />
   </div>
 </template>
 
 <script>
 
+import Comments from '../../components/dash/Comments'
 export default {
   name: 'CourseDetails',
+  components: { Comments },
   layout: 'DashCourse'
 }
 </script>

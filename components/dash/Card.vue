@@ -1,7 +1,7 @@
 <template>
   <div class="mt-3 text-dark">
     <div class="card">
-      <img src="https://avatars.mds.yandex.net/get-pdb/2847873/743f98ba-cb0c-4e50-87f5-ba1db91212e0/s1200" class="card-img-top" alt="img">
+      <img src="/img/Rectangle%203.jpg" class="card-img-top" alt="img">
       <div class="card-body">
         <h5 class="card-title">
           <button class="btn btn-primary rounded-pill">
