@@ -81,7 +81,7 @@
                   <span class="info-page">Рейтинг</span>
                 </div>
                 <div>
-                  <span class="info-page"> <img src="@/static/img/Group343.svg" alt="">Info.raiting</span>
+                  <span class="info-page"> <img src="@/static/img/Group343.svg" alt="">4.8</span>
                 </div>
               </div>
             </div>
