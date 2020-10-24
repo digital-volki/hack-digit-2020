@@ -1,36 +1,39 @@
 <template>
   <div class="container-xl">
-    <label class="MyCourses">Мои курсы</label> ><input type="text" class="imptNameCourseUpper" value="Олег Демиденко. Финансовая грамотность." readonly>
-    <input type="text" class="imptNameCourse" value="Олег Демиденко. Финансовая грамотность." readonly>
+    <label class="MyCourses">Мои курсы</label> ><input type="text" class="imptNameCourseUpper" value="Александр Сокирка. Курс Node js." readonly>
+    <input type="text" class="imptNameCourse" value="Александр Сокирка. Node Auth JWT." readonly>
     <!--    вставка видео -->
     <div class="videoCourse">
       <b-embed
         type="iframe"
         aspect="16by9"
-        src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+        src="https://www.youtube.com/embed/SnoAwLP1a-0"
         allowfullscreen
       />
     </div>
 
     <b-container class="bv-example-row">
       <b-row align-h="between">
-        <b-col cols="4">
-          Влад смотри сюда
-        </b-col>
+        <b-col cols="4" />
         <b-col cols="4" class="Next">
-          <b-button class="btnNext" variant="success">
-            Следующий шаг >
-          </b-button>
+          <nuxt-link to="/dash/courseTest">
+            <b-button class="btnNext" variant="success">
+              Следующий шаг >
+            </b-button>
+          </nuxt-link>
         </b-col>
       </b-row>
     </b-container>
+    <Comments />
   </div>
 </template>
 
 <script>
 
+import Comments from '../../components/dash/Comments'
 export default {
   name: 'CourseDetails',
+  components: { Comments },
   layout: 'DashCourse'
 }
 </script>

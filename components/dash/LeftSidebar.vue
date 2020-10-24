@@ -1,19 +1,19 @@
 <template>
   <div class="pt-5 pl-5 container-top sticky-top text-white pr-5">
-    <nuxt-link class="text-white d-flex align-items-center" to="/dash">
+    <nuxt-link class="text-white d-flex align-items-center" to="/dash/alerts">
       <Bell />
       <div class="ml-2">
         Оповещения
       </div>
       <b-badge pill class="bg-white green-link mt-1 ml-auto">
-        999
+        3
       </b-badge>
     </nuxt-link>
     <nuxt-link to="/dash/profile" class="text-white d-flex mt-3 justify-content-between align-items-center">
       <img src="/ex/avatar.png" class="" alt="avatar">
       <div class="flex-column flex-fill">
         <div class="ml-2">
-          Даниил Морозов
+          {{ `${user.lastname} ${user.firstname}` }}
         </div>
         <div class="ml-2 link">
           Перейти в профиль
@@ -76,6 +76,9 @@ export default {
     Calendar,
     Back
   },
+  // async fetch ({ store }) {
+  //   await store.dispatch('user/getUser')
+  // },
   data () {
     return {
       links: [{
@@ -110,6 +113,11 @@ export default {
         isAdmin: !this.$route.query.admin
       }],
       color: 'white'
+    }
+  },
+  computed: {
+    user () {
+      return this.$store.state.user.user
     }
   }
 }

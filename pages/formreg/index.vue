@@ -37,7 +37,7 @@ export default {
   },
   data () {
     return {
-      isActive: false
+      isActive: true
     }
   }
 }
@@ -46,8 +46,7 @@ export default {
 <style lang="css" scoped>
 .form-reg{
   width: 952px;
-  margin: 0 auto;
-  margin-top: 112px;
+  margin: 12px auto;
 }
 .form-logo-link{
   width: 20%;
@@ -55,7 +54,7 @@ export default {
 }
 .form-reg-fast{
   width: 100%;
-  height: 492px;
+  height: 702px;
   border: 2px solid #DFDFDF;
   margin-top: 56px;
   margin-bottom: 56px;
