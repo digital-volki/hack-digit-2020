@@ -20,12 +20,12 @@
             <div>
               <label class="faster-form-email">Почта*</label>
               <br>
-              <input v-model="userAuth.login" type="text" class="faster-form-input-email" placeholder="Введите вашу почту">
+              <input v-model="userAuth" type="text" class="faster-form-input-email" placeholder="Введите вашу почту">
             </div>
             <div>
               <label class="faster-form-password">Пароль*</label>
               <br>
-              <input v-model="userAuth.password" type="text" class="faster-form-input-password" placeholder="Введите пароль">
+              <input v-model="userAuth" type="text" class="faster-form-input-password" placeholder="Введите пароль">
             </div>
           </div>
           <div class="fastreg-form-chek">
