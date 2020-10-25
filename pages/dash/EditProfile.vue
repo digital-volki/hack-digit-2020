@@ -107,11 +107,11 @@
 import VueTags from 'vue-tags'
 
 export default {
+  name: 'EditProfile',
   components: {
     VueTags
   },
   layout: 'DashProfile',
-  name: 'EditProfile',
   data () {
     return {
       tags: ['Laravel', 'Vue js']

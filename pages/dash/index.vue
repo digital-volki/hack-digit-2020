@@ -15,16 +15,19 @@
         <Card :panel="isAdmin" />
       </nuxt-link>
     </div>
+    <MainSlideBar />
   </div>
 </template>
 
 <script>
 import Card from '~/components/dash/Card'
+import MainSlideBar from '~/components/dash/MainSlideBar'
 
 export default {
   name: 'Dash',
   components: {
-    Card
+    Card,
+    MainSlideBar
   },
   data () {
     return {
