@@ -1,12 +1,13 @@
 <template>
   <div class="mt-3 m-0 text-dark">
     <div class="card">
-      <img :src="`/ex/${model.img_link}.png`" class="card-img-top" alt="img">
+      <img :src="`/ex/Content/Image-${model.img_link}.png`" class="card-img-top" alt="img">
       <div class="card-body">
         <h5 class="card-title">
           <button v-for="(item, index) in model.tags" :key="index" class="btn btn-primary rounded-pill">
             {{ item }}
           </button>
+          <br>
           <br>
           {{ model.name }}
         </h5>
