@@ -67,16 +67,6 @@
           <input type="text" class="form-control" placeholder="Светлая">
         </div>
       </div>
-      <div class="element-form input-form">
-        <div class="form-group">
-          <label for="formGroupExampleInput">ФИО*</label>
-          <input id="formGroupExampleInput" type="text" class="form-control" placeholder="Кузьмин Кирилл Алексанжрович">
-        </div>
-        <div class="col">
-          <label>Почтовый адрес*</label>
-          <input type="text" class="form-control" placeholder="234567">
-        </div>
-      </div>
       <div class="row">
         <div class="col">
           <label for="inputState">Уровень образования*</label>
