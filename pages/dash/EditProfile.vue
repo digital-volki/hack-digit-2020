@@ -14,7 +14,7 @@
         <div class="element-form input-form">
           <div class="form-group">
             <label for="formGroupExampleInput">ФИО*</label>
-            <input id="formGroupExampleInput" type="text" class="form-control1" placeholder="Аникин Никита Андреевич">
+            <input id="formGroupExampleInput" type="text" class="form-control1" placeholder="Кузмин Кирилл Александрович">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput2">Почта*</label>
@@ -24,7 +24,6 @@
             <VueTags v-model="tags">
               <div
                 slot-scope="{tag_e,removeTag,inputEventHandlers,inputBindings }"
-                class=""
               >
                 <label>Выберите навыков*</label>
                 <input
@@ -71,7 +70,7 @@
       <div class="element-form input-form">
         <div class="form-group">
           <label for="formGroupExampleInput">ФИО*</label>
-          <input id="formGroupExampleInput" type="text" class="form-control" placeholder="Кузьмин Кирилл Алексанжрович"
+          <input id="formGroupExampleInput" type="text" class="form-control" placeholder="Кузьмин Кирилл Алексанжрович">
         </div>
         <div class="col">
           <label>Почтовый адрес*</label>
