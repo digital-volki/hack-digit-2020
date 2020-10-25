@@ -1,71 +1,73 @@
 <template lang="html">
   <div>
-  <div class="btnReady">
-    <b-button class="btn2 btn-success">
-      <nuxt-link class="www" to="/dash/alerts">&#60; Вернуться</nuxt-link>
-    </b-button>
-  </div>
-  <div class="form">
-  <div class="fastreg">
-    <form class="fastreg-form-all" @submit.prevent="onSubmit">
-      <div class="fastreg-form">
-        <div class="fastreg-form-block">
-          <input id="form-input" type="file" class="fastreg-form-input">
-          <label for="form-input" class="faster-form-label">
-            <div class="faster-form-foto">
-              <img src="../../static/img/camera.svg" alt="фото">
-            </div>
-            <label class="faster-form-label-foto">Загрузите ваше фото</label>
-          </label>
-        </div>
-        <label class="faster-form-header-text2">Текст</label>
-      </div>
-      <div class="fastreg-form1">
-        <div class="faster-form-block1">
-          <div>
-          <label class="faster-form-name">Наименование отправителя*</label>
-          <input type="text" class="faster-form-input-name" placeholder="Введите название">
-          <label class="faster-form-header">Заголовок*</label>
-          <input type="text" class="faster-form-input-head" placeholder="Введите заголовок">
-          </div>
-          <VueTags v-model="tags">
-            <div
-              slot-scope="{tag_e,removeTag,inputEventHandlers,inputBindings }"
-              class=""
-            >
-              <label>Рассылки</label>
-              <input
-                class="form-control"
-                placeholder="Напишите темы на рассылку сообщений"
-                v-bind="inputBindings"
-                v-on="inputEventHandlers"
-              >
-              <div class="d-flex flex-wrap">
-                <div
-                  v-for="(tag, index) in tags"
-                  :key="index"
-                  class="d-flex "
-                >
-                  <button
-                    type="button"
-                    class="btn btn-light tags-input-remove"
-                    @click="removeTag(tag)"
-                  >
-                    <span>{{ tag }}</span>
-                    &times;
-                  </button>
+    <div class="btnReady">
+      <b-button class="btn2 btn-success">
+        <nuxt-link to="/dash/alerts" class="www">
+          &#60; Вернуться
+        </nuxt-link>
+      </b-button>
+    </div>
+    <div class="form">
+      <div class="fastreg">
+        <form class="fastreg-form-all" @submit.prevent="onSubmit">
+          <div class="fastreg-form">
+            <div class="fastreg-form-block">
+              <input id="form-input" type="file" class="fastreg-form-input">
+              <label for="form-input" class="faster-form-label">
+                <div class="faster-form-foto">
+                  <img src="../../static/img/camera.svg" alt="фото">
                 </div>
-              </div>
+                <label class="faster-form-label-foto">Загрузите ваше фото</label>
+              </label>
             </div>
-          </VueTags>
-          <!--                    <nuxt-link>-->
-          <!--          </nuxt-link>-->
-        </div>
+            <label class="faster-form-header-text2">Текст</label>
+          </div>
+          <div class="fastreg-form1">
+            <div class="faster-form-block1">
+              <div>
+                <label class="faster-form-name">Наименование отправителя*</label>
+                <input type="text" class="faster-form-input-name" placeholder="Введите название">
+                <label class="faster-form-header">Заголовок*</label>
+                <input type="text" class="faster-form-input-head" placeholder="Введите заголовок">
+              </div>
+              <VueTags v-model="tags">
+                <div
+                  slot-scope="{tag_e,removeTag,inputEventHandlers,inputBindings }"
+                  class=""
+                >
+                  <label>Рассылки</label>
+                  <input
+                    class="form-control"
+                    placeholder="Напишите темы на рассылку сообщений"
+                    v-bind="inputBindings"
+                    v-on="inputEventHandlers"
+                  >
+                  <div class="d-flex flex-wrap">
+                    <div
+                      v-for="(tag, index) in tags"
+                      :key="index"
+                      class="d-flex "
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-light tags-input-remove"
+                        @click="removeTag(tag)"
+                      >
+                        <span>{{ tag }}</span>
+                        &times;
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </VueTags>
+              <!--                    <nuxt-link>-->
+              <!--          </nuxt-link>-->
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
-  </div>
-    <input type="text" class="faster-form-input-text" placeholder="Введите текст">
-  </div>
+      <input type="text" class="faster-form-input-text" placeholder="Введите текст">
+    </div>
   </div>
 </template>
 
