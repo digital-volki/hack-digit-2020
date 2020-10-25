@@ -5,7 +5,7 @@
     </div>
     <div class="prof-content">
       <div>
-        <span class="prof-name-user">Никита Аникин</span>
+        <span class="prof-name-user">Кузьмин Кирилл</span>
         <div class="prof-attain">
           <img src="@/static/img/Group.svg" alt="mk">
           <span class="prof-attain-name">Провидец</span>
@@ -31,10 +31,10 @@
           </div>
         </div>
         <div class="prof-rating-link">
-          <nuxt-link to="/" class="rating-link-know">
+          <nuxt-link to="/dash/ratingPage" class="rating-link-know">
             Рейтинг по знаниям
           </nuxt-link>
-          <nuxt-link to="/" class="rating-link-know">
+          <nuxt-link to="/dash/ratingPage" class="rating-link-know">
             Рейтинг по репутации
           </nuxt-link>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex justify-content-between mb-2 ">
+    <div class="d-flex justify-content-between mb-2">
       <div>
         Мероприятия (47)
       </div>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row container-xl">
-      <nuxt-link v-for="(item, index) in pl" :key="index" :to="!isAdmin ? '/courPage/courPage' : 'coursAdd/coursAdd'" class="col-3">
+      <nuxt-link v-for="(item, index) in pl" :key="index" :to="!isAdmin ? '/courPage/courPage' : 'courseAd/curAd'" class="col-3">
         <Card :panel="isAdmin" :model="item" />
       </nuxt-link>
     </div>
@@ -21,7 +21,6 @@
 
 <script>
 import Card from '~/components/dash/Card'
-
 import MainSlideBar from '~/components/dash/MainSlideBar'
 
 export default {
@@ -98,10 +97,7 @@ export default {
 </script>
 
 <style scoped>
-.row{
-  width: 900px;
-}
-a{
+a {
   text-decoration: none !important;
 }
 

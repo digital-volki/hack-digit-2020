@@ -68,14 +68,10 @@
           <input type="text" class="form-control" placeholder="Светлая">
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <label>Дом*</label>
-          <input type="text" class="form-control" placeholder="30">
-        </div>
-        <div class="col">
-          <label>Квартира*</label>
-          <input type="text" class="form-control" placeholder="87">
+      <div class="element-form input-form">
+        <div class="form-group">
+          <label for="formGroupExampleInput">ФИО*</label>
+          <input id="formGroupExampleInput" type="text" class="form-control" placeholder="Кузьмин Кирилл Алексанжрович"
         </div>
         <div class="col">
           <label>Почтовый адрес*</label>

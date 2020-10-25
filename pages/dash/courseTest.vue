@@ -26,12 +26,14 @@
         </div>
       </div>
       <div class="btntest">
-        <vs-button
+        <button
+          type="button"
+          class="btn btn-success"
           color="#7E72F2"
           @click="addAnswer"
         >
           Далее
-        </vs-button>
+        </button>
       </div>
       <Comments />
     </div>
@@ -77,7 +79,7 @@ export default {
 
       },
       {
-        str: 'Отлично! Теперь давай посмотрим то что походит тебе',
+        str: 'Отлично! Вы прошли тест, правильных ответов 2/3.',
         answers: [],
         right: 0
       }
@@ -125,7 +127,6 @@ export default {
     font-size: 42px;
     line-height: 46px;
     margin-top: -2px;
-    margin-left: -7px;
   }
   .imptNameCourseUpper{
     font-size: 14px;
@@ -159,6 +160,7 @@ export default {
     width: 100%;
     color: #F5F5F5;
     font-size: 19px;
+    backgroundcolor: slategray;
   }
   .textqv {
     margin: 10px 0px 10px 32px;
@@ -179,7 +181,7 @@ export default {
     margin-left: auto;
     margin-top: 20px;
     margin-bottom: -25px;
-    margin-right: 15px;
+    margin-right: 150px;
   }
   .whtbg {
     padding-top: 23px;
@@ -219,4 +221,5 @@ export default {
     color: white;
     background: #84CD8B;
   }
+
 </style>
