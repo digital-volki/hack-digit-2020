@@ -107,7 +107,7 @@ export default {
         isAdmin: false
       }, {
         name: 'Статистика',
-        to: '/statisticAdmin/statAdDay',
+        to: '/statistics/statisticsDay',
         icon: Stats,
         countNotification: 0,
         isAdmin: !this.$route.query.admin

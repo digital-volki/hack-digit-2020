@@ -8,6 +8,12 @@
       <div class="border rounded-lg d-inline-flex">
         <HeatMap />
       </div>
+      <form>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Реферальная ссылка</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="https://hack-digit-2020.vercel.app/sl/7wc6Y8mjWtf">
+        </div>
+      </form>
       <div class="d-block mt-5">
         Достижения
       </div>
@@ -84,6 +90,16 @@ export default {
 }
 
 .d-block{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #212529;
+}
+.form-group{
+  width: 1073px;
+  height: 46px;
+  margin-top: 53px;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;

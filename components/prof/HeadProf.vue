@@ -53,6 +53,7 @@ export default {
   width:1110px;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 53px;
 }
 .prof-content{
   margin-left: 24px;
