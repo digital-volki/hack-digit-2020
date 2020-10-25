@@ -277,7 +277,7 @@
             <h3 class="popular-course-text popular-course-title">
               зарегистрированные
             </h3>
-            <img src="~/static/img/sercle.svg" alt="" class="secle-stat">
+            <img src="~/static/img/sercle.svg" alt="" class="sercle-stat">
             <span class="reg-text">
               <p class="fullreg-number">
                 1000 из 2400 чел.
@@ -507,5 +507,9 @@ export default {
   font-size: 18px;
   line-height: 120%;
   color: #212529;
+}
+.sercle-stat{
+  margin-left: 39px;
+  margin-top: 32px;
 }
 </style>
