@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex justify-content-between mb-2">
+    <div class="d-flex justify-content-between mb-2 ">
       <div>
         Мероприятия (47)
       </div>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row container-xl">
-      <nuxt-link v-for="i in 24" :key="i" to="/courPage/courPage" class="col-3">
+      <nuxt-link v-for="i in 24" :key="i" to="/courPage/courPage" class="col-4">
         <Card :panel="isAdmin" />
       </nuxt-link>
     </div>
@@ -39,6 +39,9 @@ export default {
 </script>
 
 <style scoped>
+.row{
+  width: 900px;
+}
 a{
   text-decoration: none !important;
 }
