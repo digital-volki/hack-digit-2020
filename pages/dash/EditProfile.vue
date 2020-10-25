@@ -13,7 +13,7 @@
       <div class="element-form input-form">
         <div class="form-group">
           <label for="formGroupExampleInput">ФИО*</label>
-          <input id="formGroupExampleInput" type="text" class="form-control" placeholder="Аникин Никита Андреевич">
+          <input id="formGroupExampleInput" type="text" class="form-control" placeholder="Кузьмин Кирилл Алексанжрович">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">Почта*</label>
