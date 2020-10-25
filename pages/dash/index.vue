@@ -21,6 +21,7 @@
 
 <script>
 import Card from '~/components/dash/Card'
+
 import MainSlideBar from '~/components/dash/MainSlideBar'
 
 export default {
