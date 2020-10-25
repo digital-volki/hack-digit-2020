@@ -1,7 +1,7 @@
 <template>
   <div class="header-prof">
     <div class="prof-img">
-      <img src="../../static/img/fotoprof.svg" alt="foto">
+      <img src="../../static/img/fotov.png" alt="foto">
     </div>
     <div class="prof-content">
       <div>
@@ -31,10 +31,10 @@
           </div>
         </div>
         <div class="prof-rating-link">
-          <nuxt-link to="/" class="rating-link-know">
+          <nuxt-link to="/dash/ratingPage" class="rating-link-know">
             Рейтинг по знаниям
           </nuxt-link>
-          <nuxt-link to="/" class="rating-link-know">
+          <nuxt-link to="/dash/ratingPage" class="rating-link-know">
             Рейтинг по репутации
           </nuxt-link>
         </div>
@@ -53,6 +53,7 @@ export default {
   width:1110px;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 53px;
 }
 .prof-content{
   margin-left: 24px;
