@@ -29,20 +29,23 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_USER (state, user) {
-    state.user = { ...state.user, ...user }
+  SET_USER (state, payload) {
+    state.user = { ...state.user, ...payload }
   },
-  SET_TOKEN (state, token) {
-    state.user.token = token
+  SET_TOKEN (state, payload) {
+    state.user.token = payload
   }
 }
 
 export const actions = {
-  async getUser ({ commit }, obj) {
+  userInit ({ commit }, token) {
+    commit('SET_TOKEN', token)
+  },
+  async getUser ({ commit, state }, obj) {
     try {
       const resp = await this.$axios.$get(`${RootURL}?module=auth&login=${obj.login}&password=${obj.password}`)
       await commit('SET_USER', resp)
-      await this.$cookies.set('token', resp.token)
+      await this.$cookies.set('token', state.user.token)
       await this.$router.push('/dash')
     } catch (e) {
 
