@@ -1,0 +1,88 @@
+[
+    {
+        "name": "digitalstars/database",
+        "version": "v1.0.4",
+        "version_normalized": "1.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/digitalstars/DataBase.git",
+            "reference": "ba44c92abe2acbdab04cd894c07aed09e96e385d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/digitalstars/DataBase/zipball/ba44c92abe2acbdab04cd894c07aed09e96e385d",
+            "reference": "ba44c92abe2acbdab04cd894c07aed09e96e385d",
+            "shasum": ""
+        },
+        "require": {
+            "ext-pdo": "*",
+            "php": ">=5.4"
+        },
+        "time": "2020-08-12T16:01:59+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DigitalStars\\DataBase\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ZeRoX",
+                "email": "as234zx15@yandex.ru"
+            },
+            {
+                "name": "Runnin",
+                "email": "mr.kirilll12@mail.ru"
+            }
+        ],
+        "description": "Library for easy work with databases"
+    },
+    {
+        "name": "digitalstars/simple-api",
+        "version": "v0.4.0",
+        "version_normalized": "0.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/digitalstars/simple-api.git",
+            "reference": "6396479fcf74873d89f0a30c16a3326141f6f997"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/digitalstars/simple-api/zipball/6396479fcf74873d89f0a30c16a3326141f6f997",
+            "reference": "6396479fcf74873d89f0a30c16a3326141f6f997",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "php": ">=7.0"
+        },
+        "time": "2019-11-22T18:13:56+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DigitalStars\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ZeRoX",
+                "email": "as234zx15@yandex.ru"
+            },
+            {
+                "name": "Runnin",
+                "email": "mr.kirilll12@mail.ru"
+            }
+        ],
+        "description": "Библиотека для простого создания POST/GET API"
+    }
+]
