@@ -5,7 +5,7 @@
     </div>
     <div class="prof-content">
       <div>
-        <span class="prof-name-user">Никита Аникин</span>
+        <span class="prof-name-user">Кузьмин Кирилл</span>
         <div class="prof-attain">
           <img src="@/static/img/Group.svg" alt="mk">
           <span class="prof-attain-name">Провидец</span>
