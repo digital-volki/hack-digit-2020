@@ -31,10 +31,10 @@
           </div>
         </div>
         <div class="prof-rating-link">
-          <nuxt-link to="/" class="rating-link-know">
+          <nuxt-link to="/dash/ratingPage" class="rating-link-know">
             Рейтинг по знаниям
           </nuxt-link>
-          <nuxt-link to="/" class="rating-link-know">
+          <nuxt-link to="/dash/ratingPage" class="rating-link-know">
             Рейтинг по репутации
           </nuxt-link>
         </div>
