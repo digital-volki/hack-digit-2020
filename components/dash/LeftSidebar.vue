@@ -10,7 +10,7 @@
       </b-badge>
     </nuxt-link>
     <nuxt-link to="/dash/profile" class="text-white d-flex mt-3 justify-content-between align-items-center">
-      <img src="/ex/avatar.png" class="" alt="avatar">
+      <img src="/ex/avatar1.png" class="" alt="avatar">
       <div class="flex-column flex-fill">
         <div class="ml-2">
           {{ `${user.lastname} ${user.firstname}` }}

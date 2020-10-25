@@ -1,7 +1,7 @@
 <template>
   <div class="header-prof">
     <div class="prof-img">
-      <img src="../../static/img/fotoprof.svg" alt="foto">
+      <img src="../../static/img/fotov.png" alt="foto">
     </div>
     <div class="prof-content">
       <div>
