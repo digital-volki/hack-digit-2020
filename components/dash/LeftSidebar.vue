@@ -10,7 +10,7 @@
       </b-badge>
     </nuxt-link>
     <nuxt-link to="/dash/profile" class="text-white d-flex mt-3 justify-content-between align-items-center">
-      <img src="/ex/avatar.png" class="" alt="avatar">
+      <img src="/ex/avatar1.png" class="" alt="avatar">
       <div class="flex-column flex-fill">
         <div class="ml-2">
           {{ `${user.lastname} ${user.firstname}` }}
@@ -77,7 +77,7 @@ export default {
     Back
   },
   // async fetch ({ store }) {
-  //   await store.dispatch('user/getUser')
+  //   await store.dispatch('user/userInit', this.$cookies.get('token'))
   // },
   data () {
     return {
@@ -107,7 +107,7 @@ export default {
         isAdmin: false
       }, {
         name: 'Статистика',
-        to: '/statisticAdmin/statAdDay',
+        to: '/statistics/statisticsDay',
         icon: Stats,
         countNotification: 0,
         isAdmin: !this.$route.query.admin
@@ -119,6 +119,9 @@ export default {
     user () {
       return this.$store.state.user.user
     }
+  },
+  mounted () {
+    this.$store.dispatch('user/userInit', this.$cookies.get('token'))
   }
 }
 </script>

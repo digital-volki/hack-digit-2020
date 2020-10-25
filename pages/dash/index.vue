@@ -11,8 +11,8 @@
       </div>
     </div>
     <div class="row container-xl">
-      <nuxt-link v-for="i in 24" :key="i" to="/courPage/courPage" class="col-3">
-        <Card :panel="isAdmin" />
+      <nuxt-link v-for="(item, index) in pl" :key="index" :to="!isAdmin ? '/courPage/courPage' : 'courseAd/curAd'" class="col-3">
+        <Card :panel="isAdmin" :model="item" />
       </nuxt-link>
     </div>
   </div>
@@ -26,9 +26,67 @@ export default {
   components: {
     Card
   },
+  asyncData (ctx) {
+    ctx.store.dispatch('events/getAllNot')
+  },
   data () {
     return {
-      isAdmin: this.$route.query.admin
+      isAdmin: this.$route.query.admin,
+      pl: [
+        {
+          tags: ['Внутреннее'],
+          name: 'Уроки лидерства',
+          img_link: '1',
+          desc: 'Начните развивать свои лидерские качества еще в школе. Спикер Мария Гладышева, руководитель... '
+        },
+        {
+          tags: ['Партнеры'],
+          name: 'Финансовая грамотн...',
+          img_link: '2',
+          desc: 'Научитесь контролировать свои расходы и доходы, планировать и приумножать свой бюджет. Спикер Оле...'
+        },
+        {
+          tags: ['Лидеры России'],
+          name: 'RE_project',
+          img_link: '3',
+          desc: 'Школа социальных инициатив направлена на популяризацию и вовлечение в проектную деятельность... '
+        },
+        {
+          tags: ['uuu'],
+          name: 'Урок Памяти и Славы',
+          img_link: '4',
+          desc: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        },
+        {
+          tags: ['uuu'],
+          name: 'Secon 2020',
+          img_link: '5',
+          desc: 'Международная конференция разработчиков программного обеспечения в Пензе'
+        },
+        {
+          tags: ['Лидеры России'],
+          name: 'Digital Lab',
+          img_link: '6',
+          desc: 'Данный проект направлен на социально-активную молодежь, которая стремится создавать собственные... '
+        },
+        {
+          tags: ['uuu'],
+          name: 'Уроки инвестирования',
+          img_link: '7',
+          desc: 'На протяжении всей своей жизни мы имеем дело с деньгами. Мы их зарабатываем и тратим...'
+        },
+        {
+          tags: ['Эльбрус'],
+          name: 'Бизнес-инкубатор',
+          img_link: '8',
+          desc: 'Студенческий клуб «Молодежный бизнес-инкубатор» - является акселерационной... '
+        }
+      ]
+    }
+  },
+  computed: {
+    events () {
+      return this.$store.state.events.length
     }
   },
   layout: 'dash'
@@ -36,9 +94,10 @@ export default {
 </script>
 
 <style scoped>
-a{
+a {
   text-decoration: none !important;
 }
+
 div {
   font-size: 35px;
 }

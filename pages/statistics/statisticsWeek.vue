@@ -267,7 +267,7 @@
               </span>
             </span>
             <div class="stata">
-              в
+              <img src="@/static/img/stata.svg" alt="">
             </div>
             <button type="button" name="button" class="detail-info">
               Детали <img src="@/static/img/arrow-right.svg" alt="" class="img-arrow">
