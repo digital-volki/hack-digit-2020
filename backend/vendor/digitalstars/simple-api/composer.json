@@ -1,0 +1,25 @@
+{
+    "name": "digitalstars/simple-api-php",
+    "description": "Библиотека для простого создания POST/GET API",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "ZeRoX",
+            "email": "as234zx15@yandex.ru"
+        },
+        {
+            "name": "Runnin",
+            "email": "mr.kirilll12@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+      "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DigitalStars\\": "src/"
+        }
+    }
+}

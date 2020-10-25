@@ -77,7 +77,7 @@ export default {
     Back
   },
   // async fetch ({ store }) {
-  //   await store.dispatch('user/getUser')
+  //   await store.dispatch('user/userInit', this.$cookies.get('token'))
   // },
   data () {
     return {
@@ -119,6 +119,9 @@ export default {
     user () {
       return this.$store.state.user.user
     }
+  },
+  mounted () {
+    this.$store.dispatch('user/userInit', this.$cookies.get('token'))
   }
 }
 </script>
