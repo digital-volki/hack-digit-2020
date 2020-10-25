@@ -64,7 +64,7 @@
 
 import Back from '@/components/icons/Back'
 import Calendar from '@/components/icons/Calendar'
-import Cup from '@/components/icons/Cup'
+// import Cup from '@/components/icons/Cup'
 import Bookmark from '@/components/icons/Bookmark'
 import Book from '../icons/Book'
 import Bell from '../icons/Bell'
@@ -88,12 +88,6 @@ export default {
         countNotification: 2,
         isAdmin: false
       }, {
-        name: 'Достижения',
-        to: '/dash/awards',
-        icon: Cup,
-        countNotification: 1,
-        isAdmin: false
-      }, {
         name: 'Мои заявки',
         to: '/dash/requests',
         icon: Bookmark,
@@ -109,7 +103,7 @@ export default {
         name: 'Статистика',
         to: '/statistics/statisticsDay',
         icon: Stats,
-        countNotification: 0,
+        countNotification: '1',
         isAdmin: !this.$route.query.admin
       }],
       color: 'white'
