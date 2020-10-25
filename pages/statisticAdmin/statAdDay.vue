@@ -52,7 +52,7 @@
       <div class="popular-course">
         <span class="popular-course-text">
           <h3 class="popular-course-title">
-            тест_1
+            Финансовая грамотность
           </h3>
           <h3 class="popular-course-look">
             Показать по 5
@@ -83,9 +83,9 @@
                   1
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
-              <td>40</td>
-              <td>1</td>
+              <td>798/678</td>
+              <td>53</td>
+              <td>20</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -93,9 +93,9 @@
                   2
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
-              <td>40</td>
-              <td>1</td>
+              <td>1200/780</td>
+              <td>20</td>
+              <td>50</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -103,9 +103,9 @@
                   3
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
+              <td>356/896</td>
               <td>40</td>
-              <td>1</td>
+              <td>15</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -113,9 +113,9 @@
                   4
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
-              <td>40</td>
-              <td>1</td>
+              <td>1456/1284</td>
+              <td>70</td>
+              <td>60</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -123,15 +123,15 @@
                   5
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
+              <td>586/987</td>
               <td>40</td>
-              <td>1</td>
+              <td>90</td>
             </tr>
           </tbody>
         </table>
         <span class="popular-course-text">
           <h3 class="popular-course-title">
-            тест_2
+            IT-технологии
           </h3>
           <h3 class="popular-course-look">
             Показать по 5
@@ -162,9 +162,9 @@
                   1
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
+              <td>446/366</td>
               <td>40</td>
-              <td>1</td>
+              <td>17</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -172,9 +172,9 @@
                   2
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
-              <td>40</td>
-              <td>1</td>
+              <td>424/656</td>
+              <td>44</td>
+              <td>67</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -182,9 +182,9 @@
                   3
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
-              <td>40</td>
-              <td>1</td>
+              <td>4456/678</td>
+              <td>80</td>
+              <td>43</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -192,9 +192,9 @@
                   4
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
-              <td>40</td>
-              <td>1</td>
+              <td>546/900</td>
+              <td>56</td>
+              <td>35</td>
             </tr>
             <tr>
               <nuxt-link to="/">
@@ -202,9 +202,9 @@
                   5
                 </th>
               </nuxt-link>
-              <td>1000/900</td>
-              <td>40</td>
-              <td>1</td>
+              <td>1343/657</td>
+              <td>93</td>
+              <td>58</td>
             </tr>
           </tbody>
         </table>
@@ -233,8 +233,9 @@
         </div>
         <div class="info-reg">
           <h3 class="popular-course-text popular-course-title">
-            зарегистрированные
+            Прошедшие курс
           </h3>
+          <img src="~/static/img/state2.svg" alt="" class="img-state">
           <span class="reg-text">
             <p class="fullreg-number">
               1000 из 2400 чел.
@@ -474,5 +475,9 @@ export default {
   font-size: 18px;
   line-height: 120%;
   color: #212529;
+}
+.img-state{
+  margin-left: 32px;
+  margin-top: 32px;
 }
 </style>

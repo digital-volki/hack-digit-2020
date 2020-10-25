@@ -100,7 +100,9 @@ export default {
 a {
   text-decoration: none !important;
 }
-
+.row{
+  width: 900px;
+}
 div {
   font-size: 35px;
 }
