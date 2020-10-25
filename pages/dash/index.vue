@@ -12,7 +12,7 @@
     </div>
     <div class="row container-xl">
       {{ events }}
-      <nuxt-link v-for="(item, index) in pl" :key="index" :to="!isAdmin ? '/courPage/courPage' : 'coursAdd/coursAdd'" class="col-3">
+      <nuxt-link v-for="(item, index) in pl" :key="index" :to="!isAdmin ? '/courPage/courPage' : 'courseAdd/courseAdd'" class="col-3">
         <Card :panel="isAdmin" :model="item" />
       </nuxt-link>
     </div>
