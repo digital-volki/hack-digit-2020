@@ -6,16 +6,15 @@
           <input id="form-input" type="file" class="fastreg-form-input">
           <label for="form-input" class="faster-form-label">
             <div class="faster-form-foto">
-              <img src="../../static/img/camera.svg" alt="фото">
+              <img src="@/static/img/nameProfile.png" alt="фото" width="300">
             </div>
-            <label class="faster-form-label-foto">Загрузите ваше фото</label>
           </label>
         </div>
       </div>
       <div class="fastreg-form1">
         <div class="faster-form-block1">
           <label class="faster-form-name">ФИО*</label>
-          <input type="text" class="faster-form-input-name" placeholder="Введите ваше ФИО">
+          <input type="text" class="faster-form-input-name" value="Кузьмин Кирилл Александрович" placeholder="Введите ваше ФИО">
           <div class="faster-form-email-password">
             <div>
               <label class="faster-form-email">Почта*</label>
@@ -29,7 +28,7 @@
             </div>
           </div>
           <div class="fastreg-form-chek">
-            <input type="checkbox">
+            <input type="checkbox" value="1" checked="true">
             <label>Я принимаю условия <span class="faster-form-chek-link">Пользовского соглашения</span></label>
           </div>
           <VueTags v-model="tags">
@@ -39,7 +38,7 @@
             >
               <input
                 class="form-control"
-                placeholder="Add tag..."
+                placeholder="Добавить тэг"
                 v-bind="inputBindings"
                 v-on="inputEventHandlers"
               >
@@ -117,7 +116,6 @@ export default {
 }
 .fastreg-form-block{
   height: 100%;
-  background-color: #F2F2F2;
 }
 .fastreg-form-input{
   opacity: 0;
@@ -128,10 +126,9 @@ export default {
   cursor: pointer;
 }
 .faster-form-foto{
-  width: 31%;
-  height: 28%;
-  margin: 0 auto;
-  margin-top: 57px;
+  width: 200px;
+  height: 404px;
+  margin-top: -26px;
 }
 .faster-form-label-foto{
   width: 100%;
