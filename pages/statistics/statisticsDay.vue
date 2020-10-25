@@ -277,6 +277,7 @@
             <h3 class="popular-course-text popular-course-title">
               зарегистрированные
             </h3>
+            <img src="~/static/img/sercle.svg" alt="" class="secle-stat">
             <span class="reg-text">
               <p class="fullreg-number">
                 1000 из 2400 чел.

@@ -11,7 +11,7 @@
       <form>
         <div class="form-group">
           <label for="formGroupExampleInput">Реферальная ссылка</label>
-          <input  id="formGroupExampleInput" type="text" class="form-control" placeholder="https://hack-digit-2020.vercel.app/sl/7wc6Y8mjWtf">
+          <input id="formGroupExampleInput" type="text" class="form-control" placeholder="https://hack-digit-2020.vercel.app/sl/7wc6Y8mjWtf">
         </div>
       </form>
       <div class="d-block mt-5">
