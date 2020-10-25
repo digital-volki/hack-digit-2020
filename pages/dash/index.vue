@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex justify-content-between mb-2">
+    <div class="d-flex justify-content-between mb-2 ">
       <div>
         Мероприятия (47)
       </div>
@@ -11,21 +11,23 @@
       </div>
     </div>
     <div class="row container-xl">
-      {{ events }}
       <nuxt-link v-for="(item, index) in pl" :key="index" :to="!isAdmin ? '/courPage/courPage' : 'coursAdd/coursAdd'" class="col-3">
         <Card :panel="isAdmin" :model="item" />
       </nuxt-link>
     </div>
+    <MainSlideBar />
   </div>
 </template>
 
 <script>
 import Card from '~/components/dash/Card'
+import MainSlideBar from '~/components/dash/MainSlideBar'
 
 export default {
   name: 'Dash',
   components: {
-    Card
+    Card,
+    MainSlideBar
   },
   asyncData (ctx) {
     ctx.store.dispatch('events/getAllNot')
@@ -95,7 +97,10 @@ export default {
 </script>
 
 <style scoped>
-a {
+.row{
+  width: 900px;
+}
+a{
   text-decoration: none !important;
 }
 

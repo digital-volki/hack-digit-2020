@@ -225,7 +225,7 @@
             </span>
           </span>
           <div class="stata">
-            в
+            <img src="~/static/img/stata.svg" alt="">
           </div>
           <button type="button" name="button" class="detail-info">
             Детали <img src="@/static/img/arrow-right.svg" alt="" class="img-arrow">
@@ -430,7 +430,6 @@ export default {
 .stata{
   width: 395px;
   height: 122px;
-  border: 1px solid #000;
   margin-left: 40px;
   margin-top: 32px;
 }
